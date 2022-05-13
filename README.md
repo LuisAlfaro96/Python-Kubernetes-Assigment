@@ -6,4 +6,4 @@ Python script used to extract the logs from all the pods presented in a particul
 
 ## Running the script
 
-# Application Output 
+## Application Output 
