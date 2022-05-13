@@ -1,4 +1,5 @@
 from kubernetes import client, config
+import sys
 import re
 import os
 
@@ -9,9 +10,12 @@ logging.basicConfig(format='%(asctime)s - %(message)s',filename="podlogs.log",fi
 
 # Configs can be set in Configuration class directly or using helper utility
 config.load_kube_config() #To load our cluster configurations from  .kube/config 
-pod_namespace = 'default'
-
-pod_regex = 'nginx'
+try:
+    pod_namespace = sys.argv[1] 
+    pod_regex = sys.argv[2] 
+except:
+    print("+ Please enter a corresponding Namespace and part of the pods name to start ")
+    sys.exit()
 
 v1 = client.CoreV1Api()
 

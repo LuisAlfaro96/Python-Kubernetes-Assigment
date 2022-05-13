@@ -1,9 +1,9 @@
-2022-05-12 19:51:04,127 - POD_NAME: nginx-deployment-9456bbbf9-dfn78 -- NO LOG CAPTURED
-2022-05-12 19:51:04,130 - POD_NAME: nginx-deployment-9456bbbf9-j55wt --LOG CAPTURED: 172.17.0.3 - - [12/May/2022:18:42:40 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+2022-05-12 23:12:37,116 - POD_NAME: nginx-deployment-9456bbbf9-dfn78 -- NO LOG CAPTURED
+2022-05-12 23:12:37,120 - POD_NAME: nginx-deployment-9456bbbf9-j55wt --LOG CAPTURED: 172.17.0.3 - - [12/May/2022:18:42:40 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 172.17.0.3 - - [13/May/2022:01:50:57 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 172.17.0.3 - - [13/May/2022:01:50:58 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 172.17.0.3 - - [13/May/2022:01:50:59 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 172.17.0.3 - - [13/May/2022:01:50:59 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 172.17.0.3 - - [13/May/2022:01:51:00 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 
-2022-05-12 19:51:04,142 - POD_NAME: nginx-deployment-9456bbbf9-xh882 -- NO LOG CAPTURED
+2022-05-12 23:12:37,124 - POD_NAME: nginx-deployment-9456bbbf9-xh882 -- NO LOG CAPTURED
