@@ -12,15 +12,30 @@ Here it is a brief description about the purpose of each file of the assigment.
 
 The manipulation of the script its really straightforward, we only will need 2 specific parameters to know before start its execution.
 * **Namespace:** We will need to select the Namespace where our cluster reside, in this case I am using the "default"
-* * **Pod Name:** We need to specify part of the name of the pods we want to recolect logs from, inside the python file we capture this value with the regex module.
+* **Pod Name:** We need to specify part of the name of the pods we want to recolect logs from, inside the python file we capture this value with the regex module.
 
 So with that we can execute our script
 
+![image](https://user-images.githubusercontent.com/8351858/168407610-35cfcc23-214e-4f35-8afd-eee67600efd8.png)
+
 
 Once our script has been sucesfully executed we will see that our podlogs.log will be generated, we can the our log file and see what its the result
+```
+2022-05-13 20:31:36,095 - POD_NAME: nginx-deployment-9456bbbf9-dfn78 --LOGS CAPTURED: 172.17.0.4 - - [14/May/2022:02:29:51 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+172.17.0.4 - - [14/May/2022:02:29:51 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
 
+2022-05-13 20:31:36,098 - POD_NAME: nginx-deployment-9456bbbf9-j55wt --LOGS CAPTURED: 172.17.0.3 - - [14/May/2022:02:28:16 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+172.17.0.3 - - [14/May/2022:02:28:21 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+172.17.0.3 - - [14/May/2022:02:28:22 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+172.17.0.3 - - [14/May/2022:02:28:22 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+172.17.0.3 - - [14/May/2022:02:28:23 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.52.1" "-"
+
+2022-05-13 20:31:36,101 - POD_NAME: nginx-deployment-9456bbbf9-xh882 -- NO LOG CAPTURED
+```
+
+In this example the we have only 3 replicas for our ngixn application, so we will have 3 different pods where we will extract logs from, and for example pod nginx-deployment-9456bbbf9-xh882 did not have any logs recorded basically because we did not generate any GET request to it.
 
 
 ## Some Notes
 
-This was not my first approach, i did not know the existance of a kubernetes module (but thanks god it exist lol) my first idea was to recolect the logs using a request interaction to the cluster API, using the request module, i think the result could be problably the same but I would definitely have spent more time on this, the exercise was pretty fun, help more to understand the cluster comunication between each node and how we can interact with each pod in a more precise way.
+This was not my first approach, i did not know the existance of a kubernetes module (but thanks god it exist lol) my first idea was to recolect the logs using a request interaction to the cluster API, using the python request module, i think the result could be problably the same but I would definitely have spent more time on this, the exercise was pretty fun, help more to understand the cluster comunication between each node and how we can interact with each pod in a more precise way.
