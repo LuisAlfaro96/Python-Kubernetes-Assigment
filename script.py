@@ -5,9 +5,17 @@ import os
 
 
 import logging
-os.remove("podlogs.log")
-logging.basicConfig(format='%(asctime)s - %(message)s',filename="podlogs.log",filemode='a', level=logging.INFO)
 
+
+logs_file_name = "podlogs.log"
+
+
+
+if os.path.isfile(logs_file_name): #compare if the file already exist
+    os.remove(logs_file_name)
+    
+
+logging.basicConfig(format='%(asctime)s - %(message)s',filename=logs_file_name,filemode='a', level=logging.INFO) #if not, basiccally create a new one
 # Configs can be set in Configuration class directly or using helper utility
 config.load_kube_config() #To load our cluster configurations from  .kube/config 
 try:
@@ -29,6 +37,8 @@ for i in ret.items:
             logging.info("POD_NAME: "+pod_name+ " --LOG CAPTURED: "+pod_logs)
         else:
             logging.info("POD_NAME: "+pod_name+ " -- NO LOG CAPTURED")
+
+print("Logs registered within " + logs_file_name + " file inside this folder")
 
 
         
