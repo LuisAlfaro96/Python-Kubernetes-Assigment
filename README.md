@@ -5,7 +5,7 @@ Here it is a brief description about the purpose of each file of the assigment.
 
 * **nginx-deployment.yaml:** Here we will have our K8 manifest, we will create 3 particular pods, each pod will have running our nginx application specified with the docker image.
 * **script.yaml:** This is the python file will interact with our K8 configuration and structure using the [Kubernetes](https://github.com/kubernetes-client/python) module, basically with this we can execute calls to perform actions in our k8 cluster.
-* **nginx-service.yaml:** This is the service file we have created to expose our cluster for our local enviroment, we have been palaying around with the ```Publishing Services``` value, that's why we are specifing the NodePort instead of the default(ClusterIp)
+* **nginx-service.yaml:** This is the service file we have created to expose our cluster for our local enviroment, I have been playing around with the ```Publishing Services``` value, that's why we are specifing the NodePort instead of the default(ClusterIp)
 * **podlogs.log:** Basically a log file we created at the moment we execute the script, every time the script its executed this file will be wiped out and created with all the old and new logs from all the pods
 
 ## Running the script
