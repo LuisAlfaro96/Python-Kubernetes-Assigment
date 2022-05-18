@@ -1,5 +1,11 @@
 # Python-Kubernetes-Assigment
 Python script used to extract the logs from all the pods presented in a particular Namespace, develped using python and Kubernetes module to connect with the K8 cluster, the ouput of the pods logs will be stored in a log file to a better and understandable presentation.
+
+## Dependencies
+To run the script we will need only 1 dependency, which is a module that kubernetes has to connect to the cluster.
+
+```pip3 install Kubernetes ```
+
 ## Structure of the Assigment
 Here it is a brief description about the purpose of each file of the assigment.
 
