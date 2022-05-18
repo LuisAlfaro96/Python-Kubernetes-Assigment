@@ -2,7 +2,7 @@
 Python script used to extract the logs from all the pods presented in a particular Namespace, develped using python and Kubernetes module to connect with the K8 cluster, the ouput of the pods logs will be stored in a log file to a better and understandable presentation.
 
 ## Dependencies
-To run the script we will need only 1 dependency, which is a python module that connect python to the K8 cluster.
+To run the script we will need only 1 dependency, which is a python module that will connect our python script to the K8 cluster.
 
 ```pip3 install Kubernetes ```
 
